@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Damas - Java WebSockets</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <button id="menu-btn" class="menu-btn"><i class="fas fa-bars"></i></button>
+    <nav id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2>Damas Web</h2><button id="close-btn" class="close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#" id="btn-how-to-play"><i class="fas fa-book"></i> Cómo Jugar</a></li>
+            <li><a href="#" id="btn-chat-room"><i class="fas fa-comments"></i> Sala de Chat</a></li>
+            <li><a href="#" id="btn-settings"><i class="fas fa-cog"></i> Configuración</a></li>
+            <li><a href="#" id="btn-abandonar"><i class="fas fa-sign-out-alt"></i> Abandonar Partida</a></li>
+        </ul>
+    </nav>
+
+    <main class="game-wrapper">
+        <section class="board-section">
+            <div class="player-info opponent"><span>Rival: <strong id="opponent-name">Esperando...</strong></span></div>
+            <div id="checkers-board" class="board"></div>
+            <div class="player-info you"><span>Tú: <strong>Jugador 1</strong></span></div>
+        </section>
+        <section class="chat-section">
+            <div class="chat-header">
+                <h3>Chat de Partida</h3>
+            </div>
+            <div id="chat-messages" class="chat-messages"></div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Escribe un mensaje...">
+                <button id="send-msg-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
